@@ -15,6 +15,8 @@ const app = express();
 app.get('/origin', (request, response) => {
     response.send(`This mode of transportation is a ${origin.type}. This is route #${origin.route}. This stop is at ${origin.stopName}. The stop ID is ${origin.stopID} and it's stop #${origin.stopNumber} on the route.`);
 })
+//Spits out: 
+//This mode of transportation is a bus. This is route #65. This stop is at Kenmore. The stop ID is 899 and it's stop #1 on the route.
 
 //http://localhost:3001/end
 //Route #2
@@ -27,6 +29,8 @@ app.get('/origin', (request, response) => {
 app.get('/end', (request, response) => {
     response.send(`This mode of transportation is a ${end.type}. This is route #${end.route}. This stop is at ${end.stopName}. The stop ID is ${end.stopID} and it's stop #${end.stopNumber} on the route.`);
 })
+//Spits out: 
+//This mode of transportation is a bus. This is route #65. This stop is at Chestnut Hill Ave @ The Veronica Center. The stop ID is 1026 and it's stop #29 on the route.
 
 
 app.listen(PORT, () => console.log(`My data will load on port ${PORT}`))
